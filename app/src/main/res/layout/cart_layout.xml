@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="2dp"
+    >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="4dp"
+        android:layout_margin="3dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/view_background"
+            android:layout_margin="4dp"
+            android:background="@color/bgRowBackground"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/delete_icon"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/delete_icon"
+                android:text="Delete"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="13dp"
+
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@android:color/white"
+            android:id="@+id/view_foreground"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/grad_bg"
+                    android:id="@+id/food_image"
+
+                    android:layout_height="70dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="9"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Food 01"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:id="@+id/cart_item_name"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|start"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100,000"
+                        android:textStyle="italic"
+                        android:textAllCaps="true"
+                        android:id="@+id/cart_item_price"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|start"
+                        />
+                </LinearLayout>
+
+
+                <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                    android:id="@+id/btn_quantity"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    app:backGroundColor="#1e90ff"
+                    app:finalNumber="20"
+                    app:initialNumber="1"
+                    app:textSize="7dp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#1e90ff</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="black_filter">#99000000</color>
+    <color name="gray_filter">#20000000</color>
+
+    <color name="overlaybackground">#7f333639</color>
+    <color name="overlayActionbar">#0e0d0e</color>
+    <color name="gray">@android:color/darker_gray</color>
+    <color name="green">@android:color/holo_green_dark</color>
+
+    <color name="bgRowBackground">#FA315B</color>
+</resources>

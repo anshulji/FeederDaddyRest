@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edttitleofbanner"
+        android:hint="Enter Banner title for this food"
+        android:layout_marginHorizontal="10dp"
+        />
+
+</android.support.constraint.ConstraintLayout>

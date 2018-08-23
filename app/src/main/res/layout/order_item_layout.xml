@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="4dp"
+    >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginVertical="3dp"
+        app:cardCornerRadius="0dp"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <!-- TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Id: 15"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/txtorderid"
+                / -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/rlorderinfo"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_time"
+                    android:id="@+id/imgorderstatus"
+                    android:layout_marginTop="1dp"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgorderstatus"
+                    android:id="@+id/llll"
+                    android:layout_marginLeft="3dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:text="Order #195"
+                        android:id="@+id/txtorderid"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:id="@+id/txtordertime"
+                        android:text="20 Aug 2018, 1:41 PM"
+                        />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/llll"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:text="ACCEPT"
+                        android:layout_weight="1"
+                        android:id="@+id/btnaccept"
+                        android:background="@drawable/bt_bg"
+                        android:layout_marginHorizontal="5dp"
+                        android:paddingHorizontal="10dp"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="@android:color/holo_green_light"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="CANCEL"
+                        android:layout_weight="1"
+                        android:id="@+id/btncancel"
+                        android:layout_toRightOf="@+id/btnaccept"
+                        android:background="@drawable/bt_bg"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="@android:color/holo_red_light"
+                        />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/llll"
+                    android:id="@+id/rlort"
+                    android:visibility="gone"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtorderreceivetime"
+                        android:text="Order Receive time : "
+                        android:textColor="@android:color/holo_blue_dark"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/rlorderinfo"
+                android:layout_marginTop="10dp"
+                android:id="@+id/llline2"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/llline2"
+                android:id="@+id/rldeliveryboyinfo"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_person_black_24dp"
+                    android:id="@+id/imgdeliveryboy"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Mr. Suresh Sharma"
+                    android:id="@+id/txtdeliveryboyname"
+                    android:layout_marginLeft="35dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/imgcalldeliveryboy"
+                    android:text="OTP : 4629"
+                    android:id="@+id/txtdeliveryboyotp"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/imgcalldeliveryboy"
+                    android:src="@drawable/ic_phone_black_24dp"
+                    android:layout_height="20dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/rldeliveryboyinfo"
+                android:layout_marginTop="10dp"
+                android:id="@+id/llline"
+                android:orientation="horizontal" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/llline"
+                android:background="#dcdcdc"
+                android:id="@+id/idd"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:id="@+id/txttotalamount"
+                    android:paddingVertical="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Total: ₹450"
+                    android:textColor="@android:color/black"
+                    />
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/darker_gray"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/txtviewbill"
+                        android:layout_weight="1"
+                        android:paddingVertical="10dp"
+                        android:textSize="15dp"
+                        android:text="VIEW BILL"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_below="@+id/idd"
+                android:background="#d3d3d3"
+                ></LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

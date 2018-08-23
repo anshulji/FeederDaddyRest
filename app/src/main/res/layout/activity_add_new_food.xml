@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewFoodActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tbcart"
+        android:elevation="4dp"
+        android:layout_marginBottom="4dp"
+        android:padding="10dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@android:color/darker_gray"
+            android:id="@+id/imggoback"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Add New Food"
+            />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbcart"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rlparent"
+            android:layout_margin="4dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Food Name"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txtfoodname"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtfoodname"
+                        android:hint="Enter Food Name"
+                        android:id="@+id/etfoodname"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="5dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Food Description"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txtfooddescription"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtfooddescription"
+                        android:hint="Enter Food Description"
+                        android:id="@+id/etfooddescription"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="5dp"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioGroup"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Veg"
+                            android:id="@+id/radioveg"
+                            android:checked="true"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NonVeg"
+                            android:id="@+id/radiononveg"
+                            android:checked="false"
+                            android:textSize="15dp"
+                            />
+                    </RadioGroup>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="5dp"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbfullprice"
+                        android:checked="true"
+                        android:enabled="false"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Size0 Name"
+                        android:layout_toRightOf="@+id/cbfullprice"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txtfullname"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbfullprice"
+                        android:layout_below="@+id/txtfullname"
+                        android:hint="Enter Size0 Food Name"
+                        android:inputType="text"
+                        android:id="@+id/etfullname"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Size0 Price"
+                        android:layout_below="@+id/etfullname"
+                        android:layout_toRightOf="@+id/cbfullprice"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txtfullprice"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbfullprice"
+                        android:layout_below="@+id/txtfullprice"
+                        android:hint="Enter Size0 Food Price"
+                        android:inputType="number"
+                        android:id="@+id/etfullprice"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Size0 Discount"
+                        android:layout_toRightOf="@+id/cbfullprice"
+                        android:layout_below="@+id/etfullprice"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txtfulldiscount"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbfullprice"
+                        android:layout_below="@+id/txtfulldiscount"
+                        android:hint="Enter Size0 Food Discount"
+                        android:inputType="number"
+                        android:id="@+id/etfulldiscount"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="5dp"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbquarterprice"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Size1 Name"
+                        android:layout_toRightOf="@+id/cbquarterprice"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txtquartername"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbquarterprice"
+                        android:layout_below="@+id/txtquartername"
+                        android:hint="Enter Size1 Food Name"
+                        android:inputType="text"
+                        android:id="@+id/etquartername"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Size1 Price"
+                        android:layout_below="@+id/etquartername"
+                        android:layout_toRightOf="@+id/cbquarterprice"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txtquarterprice"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbquarterprice"
+                        android:layout_below="@+id/txtquarterprice"
+                        android:hint="Enter Size1 Food Price"
+                        android:inputType="number"
+                        android:id="@+id/etquarterprice"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Size1 Discount"
+                        android:layout_toRightOf="@+id/cbquarterprice"
+                        android:layout_below="@+id/etquarterprice"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txtquarterdiscount"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbquarterprice"
+                        android:layout_below="@+id/txtquarterdiscount"
+                        android:hint="Enter Size1 Food Discount"
+                        android:inputType="number"
+                        android:id="@+id/etquarterdiscount"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="5dp"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbhalfprice"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Size2 Name"
+                        android:layout_toRightOf="@+id/cbhalfprice"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txthalfname"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbhalfprice"
+                        android:layout_below="@+id/txthalfname"
+                        android:hint="Enter Size2 Food Name"
+                        android:inputType="text"
+                        android:id="@+id/ethalfname"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Size2 Price"
+                        android:layout_below="@+id/ethalfname"
+                        android:layout_toRightOf="@+id/cbhalfprice"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txthalfprice"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbhalfprice"
+                        android:layout_below="@+id/txthalfprice"
+                        android:hint="Enter Size2 Food Price"
+                        android:inputType="number"
+                        android:id="@+id/ethalfprice"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Size2 Discount"
+                        android:layout_toRightOf="@+id/cbhalfprice"
+                        android:layout_below="@+id/ethalfprice"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/txthalfdiscount"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/cbhalfprice"
+                        android:layout_below="@+id/txthalfdiscount"
+                        android:hint="Enter Size2 Food Discount"
+                        android:inputType="number"
+                        android:id="@+id/ethalfdiscount"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="AddOns"
+                        android:id="@+id/txtaddons"
+                        android:textColor="@android:color/black"
+                        />
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/recycler_addons"
+                        android:layout_below="@+id/txtaddons"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    >
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select Food Image"
+                        android:id="@+id/btnselectfoodimage"
+                        android:layout_marginHorizontal="50dp"
+                        />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SAVE"
+                        android:layout_below="@+id/btnselectfoodimage"
+                        android:id="@+id/btnsave"
+                        android:layout_marginHorizontal="20dp"
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

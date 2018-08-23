@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile"
+            android:iconTint="@android:color/white"
+            />
+        <item
+            android:id="@+id/nav_addons"
+            android:icon="@drawable/ic_add_black_24dp"
+            android:title="Add AddOns"
+            android:iconTint="@android:color/white"
+            />
+        <item
+            android:id="@+id/nav_currentorders"
+            android:icon="@drawable/ic_access_time_black_24dp"
+            android:title="Current Orders"
+            android:iconTint="@android:color/white"
+            />
+        <item
+            android:id="@+id/nav_pastorders"
+            android:icon="@drawable/ic_time"
+            android:title="Past Orders"
+            android:iconTint="@android:color/white"
+            />
+        <item
+            android:id="@+id/nav_deletebanner"
+            android:icon="@drawable/ic_delete_black_24dp"
+            android:title="Delete Banner Item"
+            android:iconTint="@android:color/white"
+            />
+
+    </group>
+
+
+</menu>

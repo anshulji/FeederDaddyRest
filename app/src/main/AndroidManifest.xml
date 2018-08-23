@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dev.fd.feederdaddyrest">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/feeder_daddy_logo"
+        android:label="Feeder Daddy Rest"
+        android:roundIcon="@drawable/feeder_daddy_logo"
+        android:supportsRtl="true"
+        android:name="com.dev.fd.feederdaddyrest.MyFirebaseApp"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label,android:icon">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDXWatuJaYlkrot2lLGQUTGo1-zeEuR_sw" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!--
+             meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBe4I3sxlK7iDrQKRX1nzPqD9PAgwSxBGA" /
+        -->
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".OrderMeal" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".FoodListActivity" />
+        <activity android:name=".FoodDetails" />
+        <activity android:name=".Cart" />
+        <activity android:name=".Orders">
+            <intent-filter>
+                <action android:name="ORDERS"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PlaceOrder" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ViewBillActivity" />
+        <activity android:name=".AddNewFoodActivity" />
+        <activity android:name=".AddOnsActivity" />
+        <activity android:name=".DeleteBannerActivity"></activity>
+
+        <service android:name=".Service.MyFirebaseIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".Service.MyAlarm"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service android:name=".Service.MyFirebaseMessaging">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
